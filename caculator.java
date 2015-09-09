@@ -276,6 +276,7 @@ boolean flag = false;
 public double getn() {
     num = Double.parseDouble(jTextField1.getText());
     jTextField1.setText("");
+    flag = false;
     return num;
 }
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
