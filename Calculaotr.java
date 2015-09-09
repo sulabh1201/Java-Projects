@@ -297,7 +297,7 @@ jTextField1.setText(text);
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton16ActionPerformed
-text= jTextField1.getText() + jButton6.getText();
+text= jTextField1.getText() + jButton16.getText();
 jTextField1.setText(text);
     }//GEN-LAST:event_jButton16ActionPerformed
 
