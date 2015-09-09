@@ -5,6 +5,7 @@
  */
 package sjnew;
 import sjnew.arith;
+import javax.swing.JOptionPane;
 /**
  *
  * @author Sulabh Jindal
@@ -271,13 +272,19 @@ public class caculator extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 public String opcode, text;
-public Double fnum,snum,res,num;
+public Double fnum,snum,res,num = 0D;
 boolean flag = false;
 public double getn() {
-    num = Double.parseDouble(jTextField1.getText());
-    jTextField1.setText("");
-    flag = false;
+    String n = jTextField1.getText();
+    if (n.equals(""))
+    {
+        JOptionPane.showMessageDialog(rootPane, "Please enter a Number","Error" , JOptionPane.ERROR_MESSAGE);
+        
+    }
+    else {num = Double.parseDouble(jTextField1.getText());
+    jTextField1.setText("");}
     return num;
+    
 }
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
  if (flag == false)text = jTextField1.getText() + jButton1.getText();
@@ -363,21 +370,25 @@ if (flag == false)text = jTextField1.getText() + jButton9.getText();
     private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
 fnum = getn(); 
 opcode = "+";
+flag = false;
     }//GEN-LAST:event_jButton12ActionPerformed
 
     private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton13ActionPerformed
 fnum = getn(); 
-opcode = "-";        // TODO add your handling code here:
+opcode = "-";
+flag = false;// TODO add your handling code here:
     }//GEN-LAST:event_jButton13ActionPerformed
 
     private void jButton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton14ActionPerformed
 fnum = getn(); 
-opcode = "*";        // TODO add your handling code here:
+opcode = "*";
+flag = false;// TODO add your handling code here:
     }//GEN-LAST:event_jButton14ActionPerformed
 
     private void jButton15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton15ActionPerformed
 fnum = getn(); 
-opcode = "/";        // TODO add your handling code here:
+opcode = "/";
+flag = false;// TODO add your handling code here:
     }//GEN-LAST:event_jButton15ActionPerformed
 
     private void jButton18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton18ActionPerformed
