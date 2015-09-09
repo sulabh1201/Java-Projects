@@ -278,7 +278,6 @@ public double getn() {
     jTextField1.setText("");
     return num;
 }
-static  int count = 0;
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
  if (flag == false)text = jTextField1.getText() + jButton1.getText();
  else {
@@ -411,9 +410,8 @@ jTextField1.setText(Double.toString(num));// TODO add your handling code here:
         arith a = new arith();
         snum = getn();       
         res = a.arithmat(fnum, snum, opcode);
-        if (count == 0)
+        if (flag == false)
             fnum = snum;
-        count++;
         jTextField1.setText(Double.toString(res));
         flag = true;// TODO add your handling code here:
     }//GEN-LAST:event_jButton17ActionPerformed

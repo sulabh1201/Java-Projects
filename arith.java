@@ -4,23 +4,23 @@
  * and open the template in the editor.
  */
 package sjnew;
-import sjnew.caculator;
+
 /**
  *
  * @author Sulabh Jindal
  */
 public class arith {
-    caculator c = new caculator();
+    double res;
     public double arithmat(double fnum,double snum,String opcode){
         if("+".equals(opcode) )
-            c.res = fnum+snum;
+            res = fnum+snum;
         else if("-".equals(opcode) )
-            c.res = fnum-snum;
+            res = fnum-snum;
         else if("*".equals(opcode) )
-            c.res = fnum*snum;
+            res = fnum*snum;
         else if("/".equals(opcode) )
-            c.res = fnum/snum;
-        return c.res;
+            res = fnum/snum;
+        return res;
         
     }
  
